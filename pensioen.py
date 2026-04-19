@@ -21,3 +21,10 @@ def bereken_pensioen(leeftijf, statuut):
         return bedrag
     else:
         return 0
+
+#Lijst met statuutkeuzes
+statuten = ["medewerker","zelfstandige", "ambtenaar"]
+
+#invoer van personeel
+leeftijd = int(input("Voer hier uw leeftijd in"))
+statuut = input("kies uit: medewerker, zelfstandige of ambtenaar").lower()
