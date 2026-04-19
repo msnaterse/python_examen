@@ -28,3 +28,17 @@ statuten = ["medewerker","zelfstandige", "ambtenaar"]
 #invoer van personeel
 leeftijd = int(input("Voer hier uw leeftijd in"))
 statuut = input("kies uit: medewerker, zelfstandige of ambtenaar").lower()
+
+# Gebruik van de functie
+pensioen = bereken_pensioen(leeftijd, statuut)
+
+# Resultaat tonen
+if statuut not in statuten:
+    print("Ongeldige invoer")
+
+elif pensioen == 0:
+    jaren = 65 - leeftijd
+    print("Je moet nog", jaren, "jaar werken.")
+
+else:
+    print("Je krijgt €", pensioen, "per week.")
